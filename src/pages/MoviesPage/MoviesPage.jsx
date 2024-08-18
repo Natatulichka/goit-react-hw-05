@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { Section } from "../../components/Section/Section";
+import Section from "../../components/Section/Section";
 import Loader from "../../components/Loader/Loader";
 import MovieList from "../../components/MovieList/MovieList";
 import Form from "../../components/Form/Form";
@@ -49,6 +50,7 @@ function MoviesPage() {
   return (
     <>
       <Section>
+        <Toaster position="top-center" reverseOrder={false} />
         <Form onSubmit={handleSubmit} />
         {isLoading && <Loader />}
         {isError && <span>Error</span>}

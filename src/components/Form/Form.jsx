@@ -23,6 +23,7 @@ function Form({ onSubmit }) {
         type="text"
         value={query}
         onChange={handleChange}
+        placeholder="Enter Movie"
       />
       <button className={css.btn} type="submit">
         <span className={css.spanBtn}>Search</span>
