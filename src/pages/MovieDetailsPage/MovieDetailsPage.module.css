@@ -6,10 +6,9 @@
 
 .boxImg {
   height: auto;
-  max-width: 100%;
+  /* max-width: 100%; */
   display: flex;
-  vertical-align: middle;
-
+  object-fit: cover;
   margin-right: 30px;
 }
 .details {

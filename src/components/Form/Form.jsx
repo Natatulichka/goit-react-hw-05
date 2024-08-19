@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import css from "./Form.module.css";
-
+import toast from "react-hot-toast";
 function Form({ onSubmit }) {
   const [query, setQuery] = useState("");
 
@@ -11,7 +11,9 @@ function Form({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (!query.trim()) {
+      return toast.success("Please enter what you want to find");
+    }
     onSubmit(query);
     setQuery("");
   };
